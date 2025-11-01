@@ -1,0 +1,53 @@
+<html>
+<head>
+    <script>
+        window.onload = () => {
+            const form = document.getElementById('form');
+            const tableBody = document.getElementById('tableBody');
+
+            const formSubmitHandler = (e) =>{
+                e.preventDefault();
+                const numeInput = document.getElementById('nume');
+                const telefonInput = document.getElementById('telefon');
+
+                if(numeInput.value === '' || telefonInput.value === '') {
+                    alert('Completati toate campurile!');
+                    return;
+                }
+
+                const row = document.createElement('tr');
+                const cellNume = document.createElement('td');
+                const cellTelefon = document.createElement('td');
+
+                cellNume.textContent = numeInput.value;
+                cellTelefon.textContent = telefonInput.value;
+
+                row.appendChild(cellNume);
+                row.appendChild(cellTelefon);
+                tableBody.appendChild(row);
+
+                document.getElementById('nume').value = "";
+                document.getElementById('telefon').value = "";
+            };
+
+            form.onsubmit = formSubmitHandler;
+    };
+    </script>
+</head>
+<body>
+    <h1>Agenda</h1>
+    <form id = "form">
+        <input type="text" id="nume" placeholder="Nume">
+        <input type="text" id="telefon" placeholder="Telefon">
+        <button type="submit">Adauga</button>
+    </form>
+
+    <table border="1">
+        <tr>
+            <th>Nume</th>
+            <th>Telefon</th>
+        </tr>
+        <tbody id="tableBody"></tbody>
+    </table>
+</body>
+</html>

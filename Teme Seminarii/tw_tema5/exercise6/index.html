@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Agenda</title>
+</head>
+<body>
+
+  <h2>Adaugă o persoană</h2>
+  <form>
+    <input id="inputName" type="text" placeholder="Name" /> <br/><br/>
+    <input id="inputAge" type="number" placeholder="Age" /> <br/><br/>
+    <button id="submitData" type="button" onclick="sendData()">Adaugă</button>
+  </form>
+
+  <h2>Caută persoană după ID</h2>
+  <form>
+    <input id="inputId" type="number" placeholder="Id-ul căutat" /> <br/><br/>
+    <button id="searchBtn" type="button" onclick="searchById()">Caută</button>
+  </form>
+
+  <div id="searchResult"></div>
+
+  <h2>Lista completă</h2>
+  <div id="tableData"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

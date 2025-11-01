@@ -1,0 +1,32 @@
+<html>
+<head>
+    <script>
+        window.onload = () => {
+            var form = document.getElementById('form');
+
+            var formSubmitHandler = (e) =>{
+                e.preventDefault();
+                var list = document.getElementById('todo');
+                var taskTxt = document.getElementById('task');
+
+                var listItem = document.createElement('li');
+
+                listItem.innerHTML = taskTxt.value;
+
+                list.appendChild(listItem);
+            };
+
+            form.onsubmit = formSubmitHandler;
+    };
+    </script>
+</head>
+<body>
+    <h1>To do</h1>
+    <ul id ="todo"></ul>
+    <h2>Add a new task</h2>
+    <form id = "form">
+        <input type="text" id="task" >
+        <button type="submit" id ="submitBtn">Add</button>
+    </form>
+</body>
+</html>

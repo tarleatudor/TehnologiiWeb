@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Chess Table</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="wrapper">
+
+      <div class="top labels">
+        <span>A</span><span>B</span><span>C</span><span>D</span>
+        <span>E</span><span>F</span><span>G</span><span>H</span>
+      </div>
+
+      <div class="board">
+        <!-- 64 squares -->
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+        <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+      </div>
+
+      <div class="bottom labels">
+        <span>A</span><span>B</span><span>C</span><span>D</span>
+        <span>E</span><span>F</span><span>G</span><span>H</span>
+      </div>
+
+    </div>
+
+  </body>
+</html>
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background: white;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.labels span {
+    display: inline-block;
+    width: 50px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+}
+
+.box:nth-child(16n + 1),
+.box:nth-child(16n + 3),
+.box:nth-child(16n + 5),
+.box:nth-child(16n + 7),
+.box:nth-child(16n + 10),
+.box:nth-child(16n + 12),
+.box:nth-child(16n + 14),
+.box:nth-child(16n + 16) {
+    background-color: #b58863;
+}
+
+.box:nth-child(16n + 2),
+.box:nth-child(16n + 4),
+.box:nth-child(16n + 6),
+.box:nth-child(16n + 8),
+.box:nth-child(16n + 9),
+.box:nth-child(16n + 11),
+.box:nth-child(16n + 13),
+.box:nth-child(16n + 15) {
+    background-color: #f0d9b5;
+}
+

@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: space-between;  
+    padding: 20px;
+}
+
+.column {
+    flex: 1;                          
+    display: flex;
+    flex-direction: column;          
+    gap: 10px;
+}
+
+.item {
+    background-color: red;
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 1px solid black;
+}
+
+.item:hover {
+    background-color: blue;
+    transform: translateX(5px);
+    border-color: darkblue;
+}
